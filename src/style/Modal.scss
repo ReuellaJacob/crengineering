@@ -1,0 +1,63 @@
+$transitionTime: 1s;
+@mixin fade {
+    -webkit-transition: all $transitionTime ;
+    -moz-transition: all $transitionTime ;
+    -ms-transition: all $transitionTime ;
+    -o-transition: all $transitionTime ;
+    transition: all $transitionTime;
+}
+
+.modal {
+    @include fade;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    z-index: 100000000000;
+}
+
+.modal-container {
+    @include fade;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: auto;
+    height: auto;
+    margin: auto;
+    border: solid 0.5px #000000;
+    border-radius: 3px;
+}
+
+.modal-body{
+    @include fade;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+    align-self: center;
+//background-color: #0d1f11;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1%;
+    margin: 10px 6%;
+}
+
+.formButton {
+    width: 70px;
+    height: 20px;
+    background-color: #ffffff;
+    border: solid 0.5px #000000;
+    border-radius: 2px;
+
+}
